@@ -7,8 +7,12 @@
     <title>Posts</title>
 </head>
 <body>
-    <h2>Author: {{posts.author}}</h2>
-    <h2>Title: {{posts.title}}</h2>
-    <p>{{posts.text}}</p>
+
+    {% for post in posts %}
+    <h2>Title: {{post.title}}</h2>
+    <h3>Author: {{post.author}}</h3>
+    <p>{{post.text}}</p>
+    <br>
+    {%endfor %}
 </body>
 </html>
