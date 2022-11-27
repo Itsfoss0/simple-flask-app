@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts</title>
-</head>
-<body>
+{% extends "base.html" %}
 
+{% block content %}
     {% for post in posts %}
-    <h2>Title: {{post.title}}</h2>
-    <h3>Author: {{post.author}}</h3>
-    <p>{{post.text}}</p>
+    <h2>{{post.title}}</h2>
+    <h4>{{post.text}}</h4>
+    <p>Author: {{post.author}}</p>
     <br>
-    {%endfor %}
-</body>
-</html>
+    {%endfor%}
+{% endblock %}
