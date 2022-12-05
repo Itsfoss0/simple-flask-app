@@ -36,3 +36,7 @@ def posts():
     }
     ]
     return(render_template('posts.html', posts=posts))
+
+@app.route("/login")
+def login():
+    return (render_template("login.html"))
